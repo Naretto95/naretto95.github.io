@@ -5,10 +5,10 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="Mon Site-CV" content="">
+  <meta name="Mon Portfolio" content="">
   <meta name="Lilian Naretto" content="">
 
-  <title>Mon Site-CV</title>
+  <title>Mon Portfolio</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,9 +19,8 @@
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="css/stylish-portfolio.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -43,7 +42,7 @@
       </div>
 
       <ul class="list-unstyled menu-elements">
-          <li class="active">
+          <li>
               <a class="scroll-link js-scroll-trigger" href="#top-content"><i class="fas fa-home"></i> Top</a>
           </li>
           <li>
@@ -64,10 +63,13 @@
               </a>
               <ul class="collapse list-unstyled" id="otherSections">
                   <li>
-                      <a class="scroll-link js-scroll-trigger" href="#section-3">blabla</a>
+                      <a class="scroll-link js-scroll-trigger" href="https://github.com/Naretto95/PascalProject-Qwirkle" target="_blank">Projet Pascal</a>
                   </li>
                   <li>
-                      <a class="scroll-link js-scroll-trigger" href="#section-4">blabla</a>
+                      <a class="scroll-link js-scroll-trigger" href="https://github.com/Naretto95/OCamlProject-Mastermind" target="_blank">Projet Ocaml</a>
+                  </li>
+                  <li>
+                      <a class="scroll-link js-scroll-trigger" href="https://github.com/Naretto95?tab=repositories" target="_blank">Autre</a>
                   </li>
               </ul>
           </li>
@@ -85,7 +87,7 @@
   <div class="content">
  
   <!-- open sidebar menu -->
-  <a class="animated fadeInLeft btn btn-primary btn-customized open-menu slow" href="#" role="button">
+  <a class="animated fadeInLeft btn btn-primary btn-customized open-menu slow" href="#" role="button" id="side">
       <i class="fas fa-align-left"></i> <span>Menu</span>
   </a>
 
@@ -101,7 +103,6 @@
       </h3>
       <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">En savoir plus</a>
     </div>
-    <div class="overlay"></div>
   </header>
 
   <!-- About -->
@@ -111,7 +112,7 @@
         <div class="col-lg-10 mx-auto">
           <h2>À Propos</h2>
           <p class="lead mb-5">
-            "Je ne suis ni particulièrement intelligent ni particulièrement doué. Je ne suis que très, très curieux." <br>- <em>Albert Einstein</em></p>
+          Je suis actuellement étudiant en 2ème année d’école d’ingénieurs à l’EISTI (École internationaledes sciences du traitement de l’information) de Cergy et je suis à la recherche d’un stage, intégré dans ma formation, pour une durée de 12 semaines et pouvant débuter le 8 juin 2021.</p>
           <a class="animated fadeInUp wow btn btn-dark btn-xl js-scroll-trigger" href="https://drive.google.com/file/d/1LJB8SjMsjs-f_uGDCGw4ELYCZ4Sqd_Ac/view" target="_blank">Mon CV</a>
           <a class="animated fadeInUp wow btn btn-xl btn-primary js-scroll-trigger" href="#competences">Mes compétences</a>
         </div>
@@ -174,6 +175,12 @@
           <div class="skillbar-bar" style="background: #23a197;"></div>
           <div class="skill-bar-percent">55%</div>
         </div> <!-- End Skill Bar -->
+
+        <div class="animated wow fadeInRight skillbar clearfix " data-percent="65%">
+          <div class="skillbar-title" style="background: #B14747;"><span>Java</span></div>
+          <div class="skillbar-bar" style="background: #D95656;"></div>
+          <div class="skill-bar-percent">60%</div>
+        </div> <!-- End Skill Bar -->
       </div>
   </section>
 
@@ -193,47 +200,47 @@
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6">
-          <a class="animated fadeInLeft portfolio-item wow slow" href="#">
+          <a class="animated fadeInLeft portfolio-item wow slow" href="https://github.com/Naretto95/OCamlProject-Mastermind" target="_blank">
             <span class="caption">
               <span class="caption-content">
-                <h2>blabla</h2>
-                <p class="mb-0">blabla</p>
+                <h2>Projet Ocaml</h2>
+                <p class="mb-0">Jeu du Mastermind sous Ocaml</p>
               </span>
             </span>
-            <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio-1.png" alt="">
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="animated fadeInRight portfolio-item wow slow" href="#">
+          <a class="animated fadeInRight portfolio-item wow slow" href="https://github.com/Naretto95/PascalProject-Qwirkle" target="_blank">
             <span class="caption">
               <span class="caption-content">
-                <h2>blabla</h2>
-                <p class="mb-0">blabla</p>
+                <h2>Projet Pascal</h2>
+                <p class="mb-0">Jeu du Qwirkle sous Pascal</p>
               </span>
             </span>
-            <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio-2.png" alt="">
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="animated fadeInLeft portfolio-item wow slow" href="#">
+          <a class="animated fadeInLeft portfolio-item wow slow" href="https://github.com/Naretto95/WebProject-Kunu" target="_blank">
             <span class="caption">
               <span class="caption-content">
-                <h2>blabla</h2>
-                <p class="mb-0">blabla</p>
+                <h2>Projet DevWeb #1</h2>
+                <p class="mb-0">Site complet développé pour une start-up</p>
               </span>
             </span>
-            <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio-3.png" alt="">
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="animated fadeInRight portfolio-item wow slow" href="#">
+          <a class="animated fadeInRight portfolio-item wow slow" href="https://github.com/Naretto95/WebProject-Forme-ation" target="_blank">
             <span class="caption">
               <span class="caption-content">
-                <h2>blabla</h2>
-                <p class="mb-0">blabla</p>
+                <h2>Projet DevWeb #2</h2>
+                <p class="mb-0">Site complet développé pour une start-up</p>
               </span>
             </span>
-            <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio-4.png" alt="">
           </a>
         </div>
       </div>
@@ -243,9 +250,102 @@
   <!-- Call to Action -->
   <section class="content-section bg-primary text-white" id="contact">
     <div class="container text-center">
-      <h2 class="mb-4">blabla</h2>
-      <a href="#" class="btn btn-xl btn-light mr-4">blabla</a>
-      <a href="#" class="btn btn-xl btn-dark">blabla</a>
+      <section class="mb-4">
+
+
+      <div class="content-section-heading">
+        <!--Section heading-->
+        <h3 class="text-secondary mb-0">Information</h3>
+        <h2 class="mb-5">Me contacter</h2>
+        <!--Section description-->
+        <p class="lead mb-5">Vous avez des questions? N'hésitez pas à me contacter directement, je ferais de mon mieux pour répondre au plus vite.</p>
+      </div>
+    
+        <div class="row">
+    
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+                <form id ="contact-form" name="contact-form" action="mail.php" method="POST"  onsubmit="return validateForm()">
+    
+                    <!--Grid row-->
+                    <div class="row">
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                            <h5>Nom :</h5>
+                                <input type="text" id="name" name="name" placeholder="Votre nom" class="form-control">
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                            <h5>Email :</h5>
+                                <input type="text" id="email" name="email" placeholder="Votre email" class="form-control">
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                    </div>
+                    <!--Grid row-->
+    
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                            <h5>Objet :</h5>
+                                <input type="text" id="subject" name="subject" placeholder="Objet" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+    
+                    <!--Grid row-->
+                    <div class="row">
+    
+                        <!--Grid column-->
+                        <div class="col-md-12">
+    
+                            <div class="md-form">
+                            <h5>Message :</h5>
+                                <textarea type="text" id="message" name="message" placeholder="Votre message" rows="2" class="form-control md-textarea"></textarea>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <!--Grid row-->
+    
+                </form>
+    
+                <div class="text-center text-md-left">
+                    <a class="animated fadeInUp wow btn btn-dark " onclick="validateForm()">Envoyer</a>
+                </div>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-md-3 text-center">
+                <ul class="list-unstyled mb-0">
+                    <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                        <p>Argenteuil, 63 rue de la chapelle, 95100 FR</p>
+                    </li>
+    
+                    <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                        <p>+ 06  67 54 27 46</p>
+                    </li>
+    
+                    <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                        <p>narettolilian@hotmail.fr</p>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+    
+        </div>
+    
+    </section>
     </div>
   </section>
 
@@ -287,11 +387,36 @@
 
   <!-- Custom scripts -->
 
-  <script src="js/stylish-portfolio.min.js"></script>
   <script src="js/wow.js"></script>
   <script>new WOW().init();</script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script>function validateForm() {
+    formData = {
+        'name'     : $('input[name=name]').val(),
+        'email'    : $('input[name=email]').val(),
+        'subject'  : $('input[name=subject]').val(),
+        'message'  : $('textarea[name=message]').val()
+    };
+
+
+   $.ajax({
+    url : "mail.php",
+    type: "POST",
+    data : formData,
+    success: function(data, textStatus, jqXHR)
+    {
+
+        alert(data.message);
+        if (data.code) //If mail was sent successfully, reset the form.
+        $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+        alert(jqXHR);
+    }
+});
+  }</script>
 
 </body>
 
