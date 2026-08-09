@@ -182,7 +182,7 @@ h6 {
 .mobile-nav-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(11, 40, 64, 0.45);
+  background: rgba(33, 37, 41, 0.5);
   z-index: 9996;
   opacity: 0;
   pointer-events: none;
@@ -216,8 +216,23 @@ h6 {
   white-space: nowrap;
 }
 
+.nav-menu button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  outline: none;
+}
+
+.nav-menu button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(16, 95, 148, 0.4);
+}
+
 .nav-menu a,
-.nav-menu a:focus {
+.nav-menu a:focus,
+.nav-menu button,
+.nav-menu button:focus {
   display: flex;
   align-items: center;
   color: #45505b;
@@ -235,12 +250,16 @@ h6 {
 }
 
 .nav-menu a i,
-.nav-menu a:focus i {
+.nav-menu a:focus i,
+.nav-menu button i,
+.nav-menu button:focus i {
   font-size: 20px;
 }
 
 .nav-menu a span,
-.nav-menu a:focus span {
+.nav-menu a:focus span,
+.nav-menu button span,
+.nav-menu button:focus span {
   padding: 0 5px 0 7px;
   color: #45505b;
 }
@@ -248,12 +267,16 @@ h6 {
 @media (min-width: 992px) {
 
   .nav-menu a,
-  .nav-menu a:focus {
+  .nav-menu a:focus,
+  .nav-menu button,
+  .nav-menu button:focus {
     width: 56px;
   }
 
   .nav-menu a span,
-  .nav-menu a:focus span {
+  .nav-menu a:focus span,
+  .nav-menu button span,
+  .nav-menu button:focus span {
     display: none;
     color: #fff;
   }
@@ -307,28 +330,36 @@ h6 {
 }
 
 .nav-menu a:hover,
+.nav-menu button:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
-.nav-menu li:hover>a {
+.nav-menu li:hover>a,
+.nav-menu li:hover>button {
   color: #fff;
   background: #105f94;
 }
 
 .nav-menu a:hover span,
+.nav-menu button:hover span,
 .nav-menu .active span,
 .nav-menu .active:focus span,
-.nav-menu li:hover>a span {
+.nav-menu li:hover>a span,
+.nav-menu li:hover>button span {
   color: #fff;
 }
 
 .nav-menu a:hover,
-.nav-menu li:hover>a {
+.nav-menu button:hover,
+.nav-menu li:hover>a,
+.nav-menu li:hover>button {
   width: 100%;
   color: #fff;
 }
 
 .nav-menu a:hover span,
-.nav-menu li:hover>a span {
+.nav-menu button:hover span,
+.nav-menu li:hover>a span,
+.nav-menu li:hover>button span {
   display: block;
 }
 
@@ -471,6 +502,14 @@ h6 {
   font-size: .8rem;
   font-weight: 600;
   box-shadow: 0 4px 14px rgba(16, 95, 148, 0.1);
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.hero-badges .tech-badge:hover {
+  background: #105f94;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(16, 95, 148, 0.25);
 }
 
 .hero-actions {
@@ -511,7 +550,7 @@ h6 {
   animation: bob 2s ease-in-out infinite;
 }
 
-@media (max-width: 767.98px) {
+@media (max-height: 950px) {
   .hero-scroll-cue {
     display: none;
   }
@@ -1112,4 +1151,255 @@ footer.footer .social-link {
 footer.footer .social-link:hover {
   background-color: #1676b6;
   text-decoration: none;
+}
+
+/* ==========================================================================
+   Dark mode
+   ========================================================================== */
+html.dark-mode {
+  --scrollbarBG: #1c2028;
+  --thumbBG: #3a4250;
+
+  & body {
+    background: #0e1117;
+    color: rgba(255, 255, 255, .85);
+  }
+
+  & .bg-light {
+    background-color: #141820 !important;
+  }
+
+  & .content-section-heading h2::before {
+    background: rgba(255, 255, 255, .15);
+  }
+
+  & .content a {
+    color: #5aa9e6;
+  }
+
+  & .content a:hover,
+  & .content a:focus,
+  & .content a:active {
+    color: #7ec4f2;
+  }
+
+  /* Sidebar / navigation */
+  @media (max-width: 991px) {
+    & #header {
+      background: #14171e;
+      box-shadow: 16px 0 40px rgba(0, 0, 0, .5);
+    }
+  }
+
+  & .nav-menu a,
+  & .nav-menu a:focus,
+  & .nav-menu button,
+  & .nav-menu button:focus {
+    background: rgba(255, 255, 255, .06);
+    color: rgba(255, 255, 255, .8);
+  }
+
+  & .nav-menu a span,
+  & .nav-menu a:focus span,
+  & .nav-menu button span,
+  & .nav-menu button:focus span {
+    color: rgba(255, 255, 255, .8);
+  }
+
+  & .nav-menu a:hover,
+  & .nav-menu button:hover,
+  & .nav-menu .active,
+  & .nav-menu .active:focus,
+  & .nav-menu li:hover > a,
+  & .nav-menu li:hover > button {
+    background: #105f94;
+    color: #fff;
+  }
+
+  & .nav-menu a:hover span,
+  & .nav-menu button:hover span,
+  & .nav-menu .active span,
+  & .nav-menu .active:focus span,
+  & .nav-menu li:hover > a span,
+  & .nav-menu li:hover > button span {
+    color: #fff;
+  }
+
+  & .mobile-nav-toggle {
+    background-color: #14171e;
+  }
+
+  & .mobile-nav-toggle i {
+    color: rgba(255, 255, 255, .85);
+  }
+
+  & #preloader {
+    background: #0e1117;
+  }
+
+  & #preloader:before {
+    border-top-color: #0e1117;
+    border-bottom-color: #0e1117;
+  }
+
+  /* Masthead */
+  & .masthead {
+    background: linear-gradient(180deg, rgba(6, 10, 20, .62) 0%, rgba(6, 10, 20, .8) 100%), url("../img/bg-masthead.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  & .masthead h1,
+  & .masthead h3 {
+    color: #f4f7fb;
+  }
+
+  & .hero-kicker {
+    background: rgba(255, 255, 255, .08);
+    border-color: rgba(255, 255, 255, .18);
+    color: #7ec4f2;
+  }
+
+  & .hero-badges .tech-badge {
+    background: rgba(255, 255, 255, .08);
+    border-color: rgba(255, 255, 255, .18);
+    color: #7ec4f2;
+  }
+
+  & .hero-badges .tech-badge:hover {
+    background: #105f94;
+    color: #fff;
+  }
+
+  & .hero-actions .btn-light {
+    background: rgba(255, 255, 255, .1) !important;
+    border-color: rgba(255, 255, 255, .2) !important;
+    color: #f4f7fb !important;
+  }
+
+  & .hero-scroll-cue {
+    background: rgba(255, 255, 255, .12);
+    color: #f4f7fb;
+  }
+
+  & .profile-frame .img-profile {
+    border-color: rgba(99, 179, 237, .35);
+  }
+
+  /* About */
+  & #about .lead,
+  & .about-strengths li span,
+  & .about-card-row span,
+  & .about-card-stack > span {
+    color: rgba(255, 255, 255, .55);
+  }
+
+  & #about p {
+    color: rgba(255, 255, 255, .65);
+  }
+
+  & .about-strengths li strong,
+  & .about-card-row strong,
+  & .skill-category-header h4,
+  & .resume .resume-title,
+  & .portfolio-card h3,
+  & .contact .info h4 {
+    color: #f0f4f9;
+  }
+
+  & .about-strengths li i,
+  & .about-card-row i,
+  & .skill-category-header .icon,
+  & .portfolio-icon {
+    background: rgba(16, 95, 148, .2);
+    color: #7ec4f2;
+  }
+
+  & .about-link {
+    background: rgba(16, 95, 148, .2);
+    color: #7ec4f2 !important;
+  }
+
+  & .about-link:hover {
+    background: #105f94;
+    color: #fff !important;
+  }
+
+  & .about-card,
+  & .skill-category,
+  & .portfolio-card,
+  & .resume .resume-item,
+  & .contact .info,
+  & .contact .email-form {
+    background: #171b23;
+    border-color: rgba(255, 255, 255, .08);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .35);
+  }
+
+  & .about-card-stack {
+    border-top-color: rgba(255, 255, 255, .08);
+  }
+
+  /* Skills */
+  & .skills .progress .skill {
+    color: rgba(255, 255, 255, .75);
+  }
+
+  & .skills .progress-bar-wrap {
+    background: rgba(255, 255, 255, .08);
+  }
+
+  /* Experience / resume */
+  & .resume .resume-item h5 {
+    background: rgba(255, 255, 255, .08);
+    color: rgba(255, 255, 255, .8);
+  }
+
+  & .resume .resume-item::before {
+    background: #171b23;
+  }
+
+  /* Portfolio */
+  & .portfolio-card p {
+    color: rgba(255, 255, 255, .55);
+  }
+
+  & .portfolio-tags .tag {
+    background: rgba(16, 95, 148, .2);
+    color: #7ec4f2;
+  }
+
+  & .portfolio-link-muted {
+    color: rgba(255, 255, 255, .45);
+  }
+
+  /* Contact */
+  & .contact .info p {
+    color: rgba(255, 255, 255, .55);
+  }
+
+  & .contact .info i {
+    background: rgba(16, 95, 148, .2);
+    color: #7ec4f2;
+  }
+
+  & .contact .email-form input,
+  & .contact .email-form textarea {
+    background: rgba(255, 255, 255, .05);
+    border-color: rgba(255, 255, 255, .12);
+    color: #f0f4f9;
+  }
+
+  & .contact .email-form input:focus,
+  & .contact .email-form textarea:focus {
+    background: rgba(255, 255, 255, .08);
+    border-color: #5aa9e6;
+    box-shadow: 0 0 0 4px rgba(90, 169, 230, .18);
+  }
+
+  & .contact .email-form input::placeholder,
+  & .contact .email-form textarea::placeholder {
+    color: rgba(255, 255, 255, .35);
+  }
 }

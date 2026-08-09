@@ -29,6 +29,15 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" rel="stylesheet">
+
+  <!-- Apply saved theme immediately to avoid flash -->
+  <script>
+    (function () {
+      if (localStorage.getItem('site-theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script>
 </head>
 
 <body id="page-top">
@@ -58,6 +67,11 @@
     </li>
     <li>
       <a class="nav-link scrollto" href="#contact"><i class="bx bx-envelope"></i><span>Contact</span></a>
+    </li>
+    <li>
+      <button type="button" id="theme-toggle" class="nav-link theme-toggle-btn" aria-label="Basculer le mode sombre">
+        <i class="bx bx-moon" id="theme-icon"></i><span>Mode sombre</span>
+      </button>
     </li>
     </ul>
   </nav>
@@ -450,7 +464,7 @@
         <span class="portfolio-link">Voir sur GitHub <i class="bx bx-right-arrow-alt"></i></span>
       </a>
 
-      <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+      <a class="portfolio-card" href="https://ottervault.otteran.com/" target="_blank" data-aos="fade-up" data-aos-delay="100">
         <div class="portfolio-icon"><i class="bx bx-shield-quarter"></i></div>
         <h3>OtterVault</h3>
         <p>Site complet développé avec le framework Django permettant la détection de vulnérabilitées dans divers actifs.</p>
@@ -458,8 +472,8 @@
           <span class="tag">Django</span>
           <span class="tag">PostgreSQL</span>
         </div>
-        <span class="portfolio-link portfolio-link-muted">Projet propriétaire</span>
-      </div>
+        <span class="portfolio-link">Voir le site <i class="bx bx-right-arrow-alt"></i></span>
+      </a>
     </div>
   </div>
 </section>

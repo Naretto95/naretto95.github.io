@@ -64,6 +64,24 @@ jQuery(document).ready(function() {
 		toggle.classList.remove('bi-x')
 	})
 
+	// ---- Dark mode toggle ---------------------------------------------------
+	let themeIcon = select('#theme-icon')
+	let themeToggle = select('#theme-toggle')
+	if (themeIcon && document.documentElement.classList.contains('dark-mode')) {
+		themeIcon.className = 'bx bx-sun'
+		themeIcon.id = 'theme-icon'
+		themeToggle.querySelector('span').textContent = 'Mode clair'
+	}
+	on('click', '#theme-toggle', function(e) {
+		let isDark = document.documentElement.classList.toggle('dark-mode')
+		localStorage.setItem('site-theme', isDark ? 'dark' : 'light')
+		if (themeIcon) {
+			themeIcon.className = isDark ? 'bx bx-sun' : 'bx bx-moon'
+			themeIcon.id = 'theme-icon'
+		}
+		this.querySelector('span').textContent = isDark ? 'Mode clair' : 'Mode sombre'
+	})
+
 	// ---- Scroll to top button appear -----------------------------------------
 	$(document).scroll(function() {
 		var scrollDistance = $(this).scrollTop();
