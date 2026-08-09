@@ -17,7 +17,6 @@ const translations = {
     'nav.contact': 'Contact',
 
     'hero.available': 'Available for new opportunities',
-    'hero.roleLabel': 'Engineer',
     'cta.learnMore': 'Learn more',
     'cta.contact': 'Contact me',
 

@@ -50,8 +50,12 @@ h6 {
 }
 
 .content-section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+#about {
   padding-top: 5.5rem;
-  padding-bottom: 5.5rem;
 }
 
 .content-section-heading h2 {
@@ -460,6 +464,15 @@ h6 {
 .masthead h3 .typed-cursor {
   font-weight: 400;
   opacity: 0.75;
+}
+
+:root:not(:lang(en)) .hero-role-suffix,
+:lang(en) .hero-role-prefix {
+  display: none;
+}
+
+:lang(en) .hero-role-suffix {
+  display: inline;
 }
 
 .hero-kicker {

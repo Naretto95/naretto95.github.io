@@ -120,12 +120,21 @@ jQuery(document).ready(function() {
 
 	// ---- Typed.js hero role animation ------------------------------------------
 	const typed = select('.typed');
+	const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 	let typedInstance = null
 	const initTyped = () => {
 		if (!typed) return
-		if (typedInstance) typedInstance.destroy()
+		if (typedInstance) {
+			typedInstance.destroy()
+			typedInstance = null
+		}
+		let items = typed.getAttribute('data-typed-items').split(',')
+		if (prefersReducedMotion) {
+			typed.textContent = items[0].trim()
+			return
+		}
 		typedInstance = new Typed('.typed', {
-			strings: typed.getAttribute('data-typed-items').split(','),
+			strings: items,
 			loop: true,
 			typeSpeed: 100,
 			backSpeed: 50,
