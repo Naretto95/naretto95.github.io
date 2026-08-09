@@ -66,21 +66,23 @@ jQuery(document).ready(function() {
 
 	// ---- Dark mode toggle ---------------------------------------------------
 	let themeIcon = select('#theme-icon')
-	let themeToggle = select('#theme-toggle')
-	if (themeIcon && document.documentElement.classList.contains('dark-mode')) {
-		themeIcon.className = 'bx bx-sun'
-		themeIcon.id = 'theme-icon'
-		themeToggle.querySelector('span').textContent = 'Mode clair'
+	let themeLabel = select('#theme-label')
+	const themeLabelText = () => {
+		let isDark = document.documentElement.classList.contains('dark-mode')
+		return window.i18n ? window.i18n.t(isDark ? 'theme.light' : 'theme.dark') : (isDark ? 'Mode clair' : 'Mode sombre')
 	}
+	const refreshThemeUI = () => {
+		let isDark = document.documentElement.classList.contains('dark-mode')
+		if (themeIcon) themeIcon.className = isDark ? 'bx bx-sun' : 'bx bx-moon'
+		if (themeLabel) themeLabel.textContent = themeLabelText()
+	}
+	refreshThemeUI()
 	on('click', '#theme-toggle', function(e) {
 		let isDark = document.documentElement.classList.toggle('dark-mode')
 		localStorage.setItem('site-theme', isDark ? 'dark' : 'light')
-		if (themeIcon) {
-			themeIcon.className = isDark ? 'bx bx-sun' : 'bx bx-moon'
-			themeIcon.id = 'theme-icon'
-		}
-		this.querySelector('span').textContent = isDark ? 'Mode clair' : 'Mode sombre'
+		refreshThemeUI()
 	})
+	document.addEventListener('i18n:change', refreshThemeUI)
 
 	// ---- Scroll to top button appear -----------------------------------------
 	$(document).scroll(function() {
@@ -118,8 +120,11 @@ jQuery(document).ready(function() {
 
 	// ---- Typed.js hero role animation ------------------------------------------
 	const typed = select('.typed');
-	if (typed) {
-		new Typed('.typed', {
+	let typedInstance = null
+	const initTyped = () => {
+		if (!typed) return
+		if (typedInstance) typedInstance.destroy()
+		typedInstance = new Typed('.typed', {
 			strings: typed.getAttribute('data-typed-items').split(','),
 			loop: true,
 			typeSpeed: 100,
@@ -127,6 +132,8 @@ jQuery(document).ready(function() {
 			backDelay: 2000
 		});
 	}
+	initTyped()
+	document.addEventListener('i18n:change', initTyped)
 });
 
 document.addEventListener("DOMContentLoaded", function() {

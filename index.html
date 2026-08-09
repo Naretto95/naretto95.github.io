@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="Lilian Naretto" content="">
+  <meta name="description" data-i18n-content="meta.description" content="Lilian Naretto, ingénieur DevSecOps IT — infrastructures, automatisation et sécurité (Terraform, Ansible, Docker, GitLab CI/CD).">
+  <meta name="author" content="Lilian Naretto">
   <link href="img/favicon.ico" rel="icon" type="image/x-icon">
 
-  <title>Lilian Naretto</title>
+  <title data-i18n="meta.title">Lilian Naretto — Ingénieur DevSecOps</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -51,26 +52,31 @@
   <nav id="navbar" class="navbar nav-menu">
     <ul>
       <li>
-        <a class="nav-link scrollto active" href="#top-content"><i class="bx bx-home"></i><span>Accueil</span></a>
+        <a class="nav-link scrollto active" href="#top-content"><i class="bx bx-home"></i><span data-i18n="nav.home">Accueil</span></a>
     </li>
     <li>
-        <a class="nav-link scrollto" href="#about"><i class="bx bx-user"></i><span>À Propos</span></a>
+        <a class="nav-link scrollto" href="#about"><i class="bx bx-user"></i><span data-i18n="nav.about">À Propos</span></a>
     </li>
     <li>
-        <a class="nav-link scrollto" href="#competences"><i class="bx bx-file-blank"></i><span>Mes compétences</span></a>
+        <a class="nav-link scrollto" href="#competences"><i class="bx bx-file-blank"></i><span data-i18n="nav.skills">Mes compétences</span></a>
     </li>
     <li>
-      <a class="nav-link scrollto" href="#experiences"><i class="bx bx-list-ul"></i><span>Expériences</span></a>
+      <a class="nav-link scrollto" href="#experiences"><i class="bx bx-list-ul"></i><span data-i18n="nav.experience">Expériences</span></a>
     </li>
     <li>
-        <a class="nav-link scrollto" href="#portfolio"><i class="bx bx-book-content"></i><span>Portfolio</span></a>
+        <a class="nav-link scrollto" href="#portfolio"><i class="bx bx-book-content"></i><span data-i18n="nav.portfolio">Portfolio</span></a>
     </li>
     <li>
-      <a class="nav-link scrollto" href="#contact"><i class="bx bx-envelope"></i><span>Contact</span></a>
+      <a class="nav-link scrollto" href="#contact"><i class="bx bx-envelope"></i><span data-i18n="nav.contact">Contact</span></a>
     </li>
     <li>
-      <button type="button" id="theme-toggle" class="nav-link theme-toggle-btn" aria-label="Basculer le mode sombre">
-        <i class="bx bx-moon" id="theme-icon"></i><span>Mode sombre</span>
+      <button type="button" id="theme-toggle" class="nav-link theme-toggle-btn" data-i18n-aria="theme.ariaLabel" aria-label="Basculer le mode sombre">
+        <i class="bx bx-moon" id="theme-icon"></i><span id="theme-label">Mode sombre</span>
+      </button>
+    </li>
+    <li>
+      <button type="button" id="lang-toggle" class="nav-link lang-toggle-btn" aria-label="Switch language / Changer de langue">
+        <i class="bx bx-globe"></i><span id="lang-label">English</span>
       </button>
     </li>
     </ul>
@@ -84,13 +90,13 @@
 <!-- Header -->
 <header class="masthead d-flex" id="top-content">
   <div class="container text-center my-auto " data-aos="fade">
-    <span class="hero-kicker"><span class="dot"></span>Disponible pour de nouvelles opportunités</span>
+    <span class="hero-kicker"><span class="dot"></span><span data-i18n="hero.available">Disponible pour de nouvelles opportunités</span></span>
     <a class="profile-frame">
         <img class="img-fluid img-profile rounded-circle" src="img/profile.png" alt="">
     </a>
     <h1 class="mb-1">Lilian <a class="nom">Naretto</a></h1>
     <h3 class="mb-4">
-      <em>Ingénieur <span class="typed" data-typed-items="informatique, DevSecOps, cybersécurité"></span></em>
+      <em><span data-i18n="hero.roleLabel">Ingénieur</span> <span class="typed" data-typed-items="informatique, DevSecOps, cybersécurité" data-typed-items-en="IT, DevSecOps, Cybersecurity"></span></em>
     </h3>
     <div class="hero-badges">
       <span class="tech-badge">Terraform</span>
@@ -100,8 +106,8 @@
       <span class="tech-badge">PowerShell DSC</span>
     </div>
     <div class="hero-actions">
-      <a class="btn btn-primary btn-xl" href="#about">En savoir plus</a>
-      <a class="btn btn-light btn-xl" href="#contact">Me contacter</a>
+      <a class="btn btn-primary btn-xl" href="#about" data-i18n="cta.learnMore">En savoir plus</a>
+      <a class="btn btn-light btn-xl" href="#contact" data-i18n="cta.contact">Me contacter</a>
     </div>
   </div>
   <a href="#about" class="hero-scroll-cue"><i class="bx bx-chevron-down"></i></a>
@@ -111,18 +117,18 @@
 <section class="content-section bg-light" id="about">
   <div class="container">
     <div class="content-section-heading text-center">
-      <h3 class="text-secondary mb-0">Qui suis-je</h3>
-      <h2 class="mb-5">À Propos</h2>
+      <h3 class="text-secondary mb-0" data-i18n="about.eyebrow">Qui suis-je</h3>
+      <h2 class="mb-5" data-i18n="about.heading">À Propos</h2>
     </div>
     <div class="row align-items-start">
       <div class="col-lg-7" data-aos="fade-right">
-        <p class="lead">
+        <p class="lead" data-i18n="about.lead">
           En tant qu'ingénieur <strong>DevOps</strong>, je m'engage à concevoir, automatiser et optimiser des infrastructures IT fiables et performantes. Passionné par la modernisation des environnements techniques, j’intègre des pratiques d’automatisation, d’intégration continue (CI/CD) et de sécurité pour garantir des déploiements rapides, stables et sécurisés.
         </p>
-        <p>
+        <p data-i18n="about.p2">
           Fort d’une expérience dans la mise en place d’infrastructures complexes avec des outils tels que <strong>Terraform, Ansible, PowerShell DSC, GitLab CI/CD</strong> ou encore <strong>Docker</strong> et <strong>Proxmox</strong>, je maîtrise l’ensemble du cycle de vie des applications, de la conception au déploiement en production.
         </p>
-        <p>
+        <p data-i18n="about.p3">
           Si vous recherchez un ingénieur DevOps passionné, orienté automatisation et amélioration continue, je serais ravi de collaborer avec vous pour construire et faire évoluer des systèmes durables et efficaces.
         </p>
 
@@ -130,30 +136,30 @@
           <li>
             <i class="bx bx-check-shield"></i>
             <div>
-              <strong>Rigueur</strong>
-              <span>Standards élevés de qualité, de sécurité et de performance.</span>
+              <strong data-i18n="about.strength1.title">Rigueur</strong>
+              <span data-i18n="about.strength1.desc">Standards élevés de qualité, de sécurité et de performance.</span>
             </div>
           </li>
           <li>
             <i class="bx bx-group"></i>
             <div>
-              <strong>Esprit d'équipe</strong>
-              <span>Collaboration et présentation régulière des avancements.</span>
+              <strong data-i18n="about.strength2.title">Esprit d'équipe</strong>
+              <span data-i18n="about.strength2.desc">Collaboration active et présentation régulière de l'avancement des projets.</span>
             </div>
           </li>
           <li>
             <i class="bx bx-bulb"></i>
             <div>
-              <strong>Résolution de problèmes</strong>
-              <span>Capacité à résoudre des problèmes techniques complexes.</span>
+              <strong data-i18n="about.strength3.title">Résolution de problèmes</strong>
+              <span data-i18n="about.strength3.desc">Capacité à résoudre des problèmes techniques complexes.</span>
             </div>
           </li>
         </ul>
 
         <div class="about-links" data-aos="fade-up">
-          <a class="about-link" href="#competences"><i class="bx bx-code-alt"></i> Mes compétences</a>
-          <a class="about-link" href="#experiences"><i class="bx bx-briefcase"></i> Mon parcours</a>
-          <a class="about-link" href="#portfolio"><i class="bx bx-folder-open"></i> Mes projets</a>
+          <a class="about-link" href="#competences"><i class="bx bx-code-alt"></i> <span data-i18n="nav.skills">Mes compétences</span></a>
+          <a class="about-link" href="#experiences"><i class="bx bx-briefcase"></i> <span data-i18n="about.link.experience">Mon parcours</span></a>
+          <a class="about-link" href="#portfolio"><i class="bx bx-folder-open"></i> <span data-i18n="about.link.portfolio">Mes projets</span></a>
         </div>
       </div>
 
@@ -161,19 +167,19 @@
         <div class="about-card">
           <div class="about-card-row">
             <i class="bx bx-briefcase"></i>
-            <div><span>Poste actuel</span><strong>Ingénieur DevSecOps IT &middot; Thales</strong></div>
+            <div><span data-i18n="about.card.roleLabel">Poste actuel</span><strong data-i18n="about.card.roleValue">Ingénieur DevSecOps IT &middot; Thales</strong></div>
           </div>
           <div class="about-card-row">
             <i class="bx bx-map"></i>
-            <div><span>Localisation</span><strong>France</strong></div>
+            <div><span data-i18n="about.card.locationLabel">Localisation</span><strong>France</strong></div>
           </div>
           <div class="about-card-row">
             <i class="bx bx-badge-check"></i>
-            <div><span>Disponibilité</span><strong>Ouvert aux nouvelles opportunités</strong></div>
+            <div><span data-i18n="about.card.availabilityLabel">Disponibilité</span><strong data-i18n="about.card.availabilityValue">Ouvert aux nouvelles opportunités</strong></div>
           </div>
 
           <div class="about-card-stack">
-            <span>Stack clé</span>
+            <span data-i18n="about.card.stackLabel">Stack clé</span>
             <div class="hero-badges about-card-badges">
               <span class="tech-badge">Terraform</span>
               <span class="tech-badge">Ansible</span>
@@ -184,8 +190,8 @@
           </div>
 
           <div class="about-card-actions">
-            <a class="btn btn-dark btn-xl btn-block" href="https://drive.google.com/file/d/1LJB8SjMsjs-f_uGDCGw4ELYCZ4Sqd_Ac/view" target="_blank"><i class="bx bx-file mr-1"></i>Mon CV</a>
-            <a class="btn btn-primary btn-xl btn-block" href="#contact"><i class="bx bx-envelope mr-1"></i>Me contacter</a>
+            <a class="btn btn-dark btn-xl btn-block" href="https://drive.google.com/file/d/1LJB8SjMsjs-f_uGDCGw4ELYCZ4Sqd_Ac/view" target="_blank"><i class="bx bx-file mr-1"></i><span data-i18n="about.card.cv">Mon CV</span></a>
+            <a class="btn btn-primary btn-xl btn-block" href="#contact"><i class="bx bx-envelope mr-1"></i><span data-i18n="cta.contact">Me contacter</span></a>
           </div>
         </div>
       </div>
@@ -197,23 +203,23 @@
 <section class="content-section bg-light text-center" id="competences">
   <div class="container">
     <div class="content-section-heading">
-      <h3 class="text-secondary mb-0">Mes compétences</h3>
-      <h2 class="mb-5">Informatiques</h2>
+      <h3 class="text-secondary mb-0" data-i18n="nav.skills">Mes compétences</h3>
+      <h2 class="mb-5" data-i18n="skills.heading">Informatiques</h2>
     </div>
     <div class="row">
       <section class="skills">
         <div class="container">
-  
+
           <div class="comments">
-            <p>Mes nombreux projets et exercices dans le domaine de l'informatique m'ont permis d'acquérir diverses compétences dans des langages de programmation variés, même si certains sont plus poussés, mon adaptation me permet d'apprendre un nouveau langage de manière aisée.</p>
+            <p data-i18n="skills.comments">Mes projets professionnels et personnels m'ont permis d'acquérir des compétences solides dans des langages et outils variés. Ma capacité d'adaptation me permet d'apprendre rapidement de nouvelles technologies.</p>
           </div>
-  
+
           <div class="skills-categories skills-content">
 
             <div class="skill-category" data-aos="fade-up">
               <div class="skill-category-header">
                 <span class="icon"><i class="bx bx-cloud"></i></span>
-                <h4>Infrastructure &amp; Automatisation</h4>
+                <h4 data-i18n="skills.cat1">Infrastructure &amp; Automatisation</h4>
               </div>
 
               <div class="progress">
@@ -241,7 +247,7 @@
             <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
               <div class="skill-category-header">
                 <span class="icon"><i class="bx bxl-docker"></i></span>
-                <h4>Virtualisation &amp; CI/CD</h4>
+                <h4 data-i18n="skills.cat2">Virtualisation &amp; CI/CD</h4>
               </div>
 
               <div class="progress">
@@ -269,7 +275,7 @@
             <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
               <div class="skill-category-header">
                 <span class="icon"><i class="bx bx-code-alt"></i></span>
-                <h4>Langages &amp; Développement</h4>
+                <h4 data-i18n="skills.cat3">Langages &amp; Développement</h4>
               </div>
 
               <div class="progress">
@@ -310,106 +316,105 @@
 <section class="content-section bg-light" id="experiences">
   <div class="container">
     <div class="content-section-heading text-center">
-      <h3 class="text-secondary mb-0">Mon parcours</h3>
-      <h2 class="mb-5">Expériences</h2>
+      <h3 class="text-secondary mb-0" data-i18n="about.link.experience">Mon parcours</h3>
+      <h2 class="mb-5" data-i18n="nav.experience">Expériences</h2>
     </div>
     <div class="row">
 
       <div class="comments text-center">
-        <p>Mes expériences dans le domaine informatique m'ont permis d'appliquer les diverses compétences acquises dans mes projets et/ou formations, ces expériences ont été pour moi une importante évolution d'un point de vue professionnel mais aussi personnel.</p>
+        <p data-i18n="exp.comments">Mes expériences professionnelles m'ont permis de mettre en pratique les compétences acquises durant ma formation et de gagner en autonomie sur des projets d'infrastructure à responsabilité croissante.</p>
       </div>
 
       <section class="resume">
         <div class="container">
           <div class="row">
             <div class="col-lg-6" data-aos="fade-right">
-              <h3 class="resume-title"><i class="bx bxs-graduation"></i>Formation</h3>
+              <h3 class="resume-title"><i class="bx bxs-graduation"></i><span data-i18n="exp.education">Formation</span></h3>
 
               <div class="resume-item">
-                <h4>École d’ingénieurs</h4>
+                <h4 data-i18n="exp.edu.school">École d’ingénieurs</h4>
                 <h5>2019 - 2022</h5>
                 <p><em>CY Tech, Cergy, France</em></p>
-                <p>Informatique - Option cybersécurité.</p>
+                <p data-i18n="exp.edu1.desc">Informatique - Option cybersécurité.</p>
               </div>
 
               <div class="resume-item">
-                <h4>Licence en informatique</h4>
+                <h4 data-i18n="exp.edu2.title">Licence en informatique</h4>
                 <h5>2017 - 2020</h5>
                 <p><em>CY Cergy Paris Université, Cergy, France</em></p>
-                <p>Licence obtenue en double diplôme.</p>
+                <p data-i18n="exp.edu2.desc">Licence obtenue en double diplôme.</p>
               </div>
 
               <div class="resume-item">
-                <h4>École d’ingénieurs</h4>
+                <h4 data-i18n="exp.edu.school">École d’ingénieurs</h4>
                 <h5>2017 - 2019</h5>
                 <p><em>CY Tech, Cergy, France</em></p>
-                <p>Classe préparatoire intégrée.</p>
+                <p data-i18n="exp.edu3.desc">Classe préparatoire intégrée.</p>
               </div>
 
               <div class="resume-item">
-                <h4>Baccalauréat série S</h4>
+                <h4 data-i18n="exp.edu4.title">Baccalauréat série S</h4>
                 <h5>2015 - 2017</h5>
                 <p><em>Lycée Jean Jaurès, Argenteuil, France</em></p>
-                <p>Spécialité ISN (Informatique et Sciences du Numérique).</p>
+                <p data-i18n="exp.edu4.desc">Spécialité ISN (Informatique et Sciences du Numérique).</p>
               </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
-              <h3 class="resume-title"><i class="bx bxs-briefcase"></i>Expériences professionnelles</h3>
+              <h3 class="resume-title"><i class="bx bxs-briefcase"></i><span data-i18n="exp.workHistory">Expériences professionnelles</span></h3>
 
               <div class="resume-item current">
-                <span class="resume-badge">Actuel</span>
-                <h4>Ingénieur DevSecOps IT</h4>
-                <h5>08/01/2024 - Présent</h5>
+                <span class="resume-badge" data-i18n="exp.current">Actuel</span>
+                <h4 data-i18n="exp.job1.title">Ingénieur DevSecOps IT</h4>
+                <h5><span data-i18n="exp.job1.dates">08/01/2024 - Présent</span></h5>
                 <p><em>Thales</em></p>
                 <ul>
-                  <li>Mettre en œuvre l’automatisation de l’infrastructure IT.</li>
-                  <li>Déploiement de l’infrastructure via divers outils : PowerShell DSC, Terraform, Ansible, Bash, GitLab, etc.</li>
-                  <li>Responsable du déploiement de l’Active Directory, DFS, RADIUS, Antivirus, bases de données, ...</li>
-                  <li>Déploiement de plus de 50 VMs via Terraform sous vSphere.</li>
-                  <li>Responsable du bon fonctionnement de l’infrastructure en production.</li>
-                  <li>Définir et faire évoluer l’architecture de référence.</li>
-                  <li>Déploiement automatisé via GitLab et pipelines CI/CD pour assurer des mises en production rapides et stables.</li>
+                  <li data-i18n="exp.job1.b1">Automatisation de l’infrastructure IT.</li>
+                  <li data-i18n="exp.job1.b2">Déploiement de l’infrastructure via divers outils : PowerShell DSC, Terraform, Ansible, Bash, GitLab, etc.</li>
+                  <li data-i18n="exp.job1.b3">Responsable du déploiement de l’Active Directory, DFS, RADIUS, antivirus, bases de données, etc.</li>
+                  <li data-i18n="exp.job1.b4">Déploiement de plus de 50 VMs via Terraform sous vSphere.</li>
+                  <li data-i18n="exp.job1.b5">Responsable du bon fonctionnement de l’infrastructure en production.</li>
+                  <li data-i18n="exp.job1.b6">Définition et évolution de l’architecture de référence.</li>
+                  <li data-i18n="exp.job1.b7">Déploiement automatisé via GitLab et pipelines CI/CD pour assurer des mises en production rapides et stables.</li>
                 </ul>
               </div>
 
               <div class="resume-item">
-                <h4>Fondateur</h4>
+                <h4 data-i18n="exp.job2.title">Fondateur</h4>
                 <h5>2022 - 2023</h5>
                 <p><em>Otteran</em></p>
                 <ul>
-                  <li>Fondateur d'Otteran, dirigeant d'entreprise de développement de logiciels.</li>
-                  <li>Projet phare: OtterVault, un site web innovant pour regrouper les assets informatiques et détecter les vulnérabilités de sécurité.</li>
-                  <li>Développement de l'application en Django.</li>
-                  <li>Gère la base de données en PostgreSQL.</li>
-                  <li>API qui facilite l'envoi d'informations sur les vulnérabilités via une interface intuitive.</li>
-                  <li>Responsable de tous les aspects de l'entreprise: conception, développement, finances, relations clients.</li>
-                  <li>Seul employé d'Otteran.</li>
+                  <li data-i18n="exp.job2.b1">Fondateur et dirigeant d'Otteran, entreprise de développement de logiciels.</li>
+                  <li data-i18n="exp.job2.b2">Projet phare : OtterVault, une plateforme pour recenser les actifs informatiques et détecter leurs vulnérabilités de sécurité.</li>
+                  <li data-i18n="exp.job2.b3">Développement de l'application avec le framework Django.</li>
+                  <li data-i18n="exp.job2.b4">Gestion de la base de données PostgreSQL.</li>
+                  <li data-i18n="exp.job2.b5">Conception d'une API facilitant la remontée des informations de vulnérabilités via une interface intuitive.</li>
+                  <li data-i18n="exp.job2.b6">Responsable de tous les aspects de l'entreprise : conception, développement, finances, relations clients.</li>
+                  <li data-i18n="exp.job2.b7">Structure unipersonnelle, gérée en totale autonomie.</li>
                 </ul>
               </div>
 
               <div class="resume-item">
-                <h4>Ingénieur DevSecOps | cybersécurité (12 mois)</h4>
+                <h4 data-i18n="exp.job3.title">Ingénieur DevSecOps | cybersécurité (12 mois)</h4>
                 <h5>2021 - 2022</h5>
                 <p><em>Idemia, Osny, France</em></p>
                 <ul>
-                  <li>Business Case au sein d’une équipe , continuation et mise en place de Minotaur. Plusieurs outils internes ou externes sont mis à disposition : Cyberwatch, Nexus...</li>
-                  <li>Mise un place d'un processus d'administration et de traitement des failles détectées.</li>
-                  <li>Utilisation des outils DevSecOps, mettre en place le hardening, et faire des tests d'intrusion (pentest) sur Minotaur.</li>
-                  <li>Déploiement continu de l'application via divers outils : Jenkins, Nginx, Gunicorn... et analyse de code via SonarQube et Nexus IQ.</li>
-                  <li>Mise en place complète de la base de données (postgreSQL).</li>
-                  <li>Automatisation de la collection des données (Cyberwatch, PDF, HTML, XML, CSV).</li>
-                  <li>Présentation orale bimensuel au sein de l'équipe pour montrer les avancements du projet.</li>
-                  <li>Création d'un AD FS pour l'équipe, intégration de Minotaur dans l'AD d'Idemia.</li>
+                  <li data-i18n="exp.job3.b1">Poursuite et mise en place du projet Minotaur au sein d'une équipe, en s'appuyant sur plusieurs outils internes et externes : Cyberwatch, Nexus, etc.</li>
+                  <li data-i18n="exp.job3.b2">Mise en place d'un processus d'administration et de traitement des failles détectées.</li>
+                  <li data-i18n="exp.job3.b3">Utilisation d'outils DevSecOps, mise en place du hardening et réalisation de tests d'intrusion (pentest) sur Minotaur.</li>
+                  <li data-i18n="exp.job3.b4">Déploiement continu de l'application via divers outils : Jenkins, Nginx, Gunicorn, etc., et analyse de code via SonarQube et Nexus IQ.</li>
+                  <li data-i18n="exp.job3.b5">Mise en place complète de la base de données PostgreSQL.</li>
+                  <li data-i18n="exp.job3.b6">Automatisation de la collecte des données (Cyberwatch, PDF, HTML, XML, CSV).</li>
+                  <li data-i18n="exp.job3.b7">Présentations orales bimensuelles à l'équipe pour partager l'avancement du projet.</li>
+                  <li data-i18n="exp.job3.b8">Mise en place d'un AD FS dédié à l'équipe et intégration de Minotaur à l'Active Directory d'Idemia.</li>
                 </ul>
               </div>
 
               <div class="resume-item">
-                <h4>Stagiaire DevSecOps | cybersécurité (6 mois)</h4>
+                <h4 data-i18n="exp.job4.title">Stagiaire DevSecOps | cybersécurité (6 mois)</h4>
                 <h5>2021</h5>
                 <p><em>Idemia, Osny, France</em></p>
                 <ul>
-                  <li>Création d'une solution de référencement des éléments logiciels et matériels installés sur les projets à l'aide du framework Django (nom de code : Minotaur) en autonomie.
-                    Cette base permettra de faire des audits de sécurité sur la vulnérabilité des projets déployés.</li>
+                  <li data-i18n="exp.job4.b1">Conception, en autonomie, d'une solution de référencement des éléments logiciels et matériels des projets à l'aide du framework Django (nom de code : Minotaur), permettant de mener des audits de sécurité sur les projets déployés.</li>
                 </ul>
               </div>
             </div>
@@ -423,56 +428,57 @@
 <section class="content-section bg-light" id="portfolio">
   <div class="container">
     <div class="content-section-heading text-center">
-      <h3 class="text-secondary mb-0">Portfolio</h3>
-      <h2 class="mb-5">Projets</h2>
+      <h3 class="text-secondary mb-0" data-i18n="nav.portfolio">Portfolio</h3>
+      <h2 class="mb-5" data-i18n="portfolio.heading">Projets</h2>
     </div>
 
     <div class="comments text-center">
-      <p>Mes divers projets sont une expression de ma passion pour l'informatique, pour chaque langage appris, un projet en suit afin de me permettre d'appliquer mes connaissances et de me mettre en situation de challenge, pour plus de détails, vous pouvez visiter ma page github <a href="https://github.com/Naretto95/">ici</a>, ou bien en cliquant sur l'icône en bas de page.</p>
+      <p data-i18n="portfolio.comments">Mes projets personnels reflètent ma passion pour l'informatique : chaque technologie apprise donne lieu à une réalisation concrète, l'occasion de mettre mes connaissances en pratique et de me confronter à de nouveaux défis. Retrouvez l'ensemble de mon travail sur mon profil <a href="https://github.com/Naretto95/">GitHub</a>, également accessible via l'icône en bas de page.</p>
     </div>
 
     <div class="portfolio-grid">
       <a class="portfolio-card" href="https://github.com/Naretto95/Ansible-HomeLab" target="_blank" data-aos="fade-up">
         <div class="portfolio-icon"><i class="bx bx-server"></i></div>
         <h3>HomeLab - Ansible/GitLab</h3>
-        <p>Projet de déploiement complet d’un HomeLab personnel.</p>
+        <p data-i18n="portfolio.card1.desc">Projet de déploiement complet d’un HomeLab personnel.</p>
         <div class="portfolio-tags">
           <span class="tag">Ansible</span>
           <span class="tag">GitLab</span>
         </div>
-        <span class="portfolio-link">Voir sur GitHub <i class="bx bx-right-arrow-alt"></i></span>
+        <span class="portfolio-link" data-i18n="portfolio.viewGithub">Voir sur GitHub <i class="bx bx-right-arrow-alt"></i></span>
       </a>
 
       <a class="portfolio-card" href="https://github.com/Naretto95/Python.Cpp-VirtualCore" target="_blank" data-aos="fade-up" data-aos-delay="100">
         <div class="portfolio-icon"><i class="bx bx-chip"></i></div>
-        <h3>Coeur virtuel - Python / C++</h3>
-        <p>Création d’un coeur virtuel en C, avec un compilateur en Python.</p>
+        <h3 data-i18n="portfolio.card2.title">Cœur virtuel - Python / C++</h3>
+        <p data-i18n="portfolio.card2.desc">Conception d’un cœur virtuel en C, accompagné d’un compilateur développé en Python.</p>
         <div class="portfolio-tags">
           <span class="tag">Python</span>
           <span class="tag">C++</span>
         </div>
-        <span class="portfolio-link">Voir sur GitHub <i class="bx bx-right-arrow-alt"></i></span>
+        <span class="portfolio-link" data-i18n="portfolio.viewGithub">Voir sur GitHub <i class="bx bx-right-arrow-alt"></i></span>
       </a>
 
       <a class="portfolio-card" href="https://github.com/Naretto95/Flask-Cryptography" target="_blank" data-aos="fade-up">
         <div class="portfolio-icon"><i class="bx bxs-lock-alt"></i></div>
-        <h3>Cryptographie - Flask</h3>
-        <p>Site complet développé avec le framework Flask dans le cadre d'un projet d'étude en cryptographie.</p>
+        <h3 data-i18n="portfolio.card3.title">Cryptographie - Flask</h3>
+        <p data-i18n="portfolio.card3.desc">Site complet développé avec le framework Flask dans le cadre d'un projet d'étude en cryptographie.</p>
         <div class="portfolio-tags">
-          <span class="tag">C++</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Python</span>
         </div>
-        <span class="portfolio-link">Voir sur GitHub <i class="bx bx-right-arrow-alt"></i></span>
+        <span class="portfolio-link" data-i18n="portfolio.viewGithub">Voir sur GitHub <i class="bx bx-right-arrow-alt"></i></span>
       </a>
 
       <a class="portfolio-card" href="https://ottervault.otteran.com/" target="_blank" data-aos="fade-up" data-aos-delay="100">
         <div class="portfolio-icon"><i class="bx bx-shield-quarter"></i></div>
         <h3>OtterVault</h3>
-        <p>Site complet développé avec le framework Django permettant la détection de vulnérabilitées dans divers actifs.</p>
+        <p data-i18n="portfolio.card4.desc">Site complet développé avec le framework Django permettant la détection de vulnérabilités dans divers actifs.</p>
         <div class="portfolio-tags">
           <span class="tag">Django</span>
           <span class="tag">PostgreSQL</span>
         </div>
-        <span class="portfolio-link">Voir le site <i class="bx bx-right-arrow-alt"></i></span>
+        <span class="portfolio-link" data-i18n="portfolio.viewSite">Voir le site <i class="bx bx-right-arrow-alt"></i></span>
       </a>
     </div>
   </div>
@@ -482,58 +488,58 @@
 <section class="content-section bg-light" id="contact">
   <div class="container">
     <div class="content-section-heading text-center">
-      <h3 class="text-secondary mb-0">Me contacter</h3>
+      <h3 class="text-secondary mb-0" data-i18n="cta.contact">Me contacter</h3>
       <h2 class="mb-5">Contact</h2>
     </div>
     <div >
       <section class="contact">
         <div class="container">
-    
+
           <div class="row mt-1 align-items-stretch">
 
             <div class="col-lg-4" data-aos="fade-right">
               <div class="info">
                 <div class="address">
                   <i class="bi bi-geo-alt"></i>
-                  <h4>Localisation:</h4>
+                  <h4 data-i18n="contact.location">Localisation:</h4>
                   <p>France</p>
                 </div>
-    
+
                 <div class="email">
                   <i class="bi bi-envelope"></i>
                   <h4>Email:</h4>
                   <p>narettolilian@hotmail.fr</p>
                 </div>
-    
+
                 <div class="phone">
                   <i class="bi bi-phone"></i>
-                  <h4>Téléphone:</h4>
+                  <h4 data-i18n="contact.phone">Téléphone:</h4>
                   <p>+33 6 67 54 27 46</p>
                 </div>
-    
+
               </div>
-    
+
             </div>
-    
+
             <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-up">
-    
+
               <form id="contactform" role="form" class="email-form">
                 <div class="row">
                   <input type="hidden" name="contact_number">
                   <div class="col-md-6 form-group mb-4">
-                    <input type="text" name="from_name" class="form-control" id="name" placeholder="Nom" required>
+                    <input type="text" name="from_name" class="form-control" id="name" data-i18n-placeholder="contact.form.name" placeholder="Nom" required>
                   </div>
                   <div class="col-md-6 form-group mb-4">
                     <input type="email" class="form-control" name="reply_to" id="email" placeholder="Email" required>
                   </div>
                 </div>
                 <div class="form-group mb-4">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" required>
+                  <input type="text" class="form-control" name="subject" id="subject" data-i18n-placeholder="contact.form.subject" placeholder="Sujet" required>
                 </div>
                 <div class="form-group mb-4">
                   <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                 </div>
-                <div class="text-center"><button id="btnload" class ="btnload btn btn-primary btn-xl" type="submit" value="Send">Envoyer</button></div>
+                <div class="text-center"><button id="btnload" class ="btnload btn btn-primary btn-xl" type="submit" value="Send" data-i18n="contact.form.send">Envoyer</button></div>
               </form>
     
             </div>
@@ -561,7 +567,7 @@
         </a>
       </li>
     </ul>
-    <p class="text-muted small mb-0">Copyright &copy; Lilian Naretto 2022</p>
+    <p class="text-muted small mb-0">Copyright &copy; Lilian Naretto 2022 - 2026</p>
   </div>
 </footer>
 
@@ -583,6 +589,7 @@
   <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
 
   <!-- Custom scripts -->
+  <script src="js/lang.js"></script>
   <script src="js/scripts.js"></script>
 
 </body>
